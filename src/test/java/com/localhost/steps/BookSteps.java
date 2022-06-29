@@ -23,7 +23,7 @@ public class BookSteps {
 
     @Then("^I Verify that first item title is \"([^\"]*)\"$")
     public void iVerifyThatFirstItemTitleIs(String bookname) throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         Assert.assertTrue(new BookSectionPage().verifyBookInSection()
                 .contains("Harry Potter and the Philosopher’s Stone"));
 
@@ -31,19 +31,22 @@ public class BookSteps {
     }
 
     @And("^I Verify that book has \"([^\"]*)\" badge$")
-    public void iVerifyThatBookHasBadge(String text)  {
+    public void iVerifyThatBookHasBadge(String text) throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertEquals("Book is not bestseller ",text,new BookSectionPage().verifyBadge());
 
     }
 
     @And("^I Verify that Selected type is \"([^\"]*)\" paperback$")
-    public void iVerifyThatSelectedTypeIsPaperback(String texts)  {
+    public void iVerifyThatSelectedTypeIsPaperback(String texts) throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertEquals("Book has no paperback ",texts,new BookSectionPage().verifypapaerback());
 
     }
 
     @And("^I Verify that the price is \"([^\"]*)\"$")
-    public void iVerifyThatThePriceIs(String msg)  {
+    public void iVerifyThatThePriceIs£(String msg) throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertEquals("Book has no price ",msg,new BookSectionPage().verifyPrice());
     }
 
@@ -54,22 +57,26 @@ public class BookSteps {
     }
 
     @And("^Click On Add to Basket$")
-    public void clickOnAddToBasket() {
+    public void clickOnAddToBasket() throws InterruptedException {
+        Thread.sleep(2000);
         new BookDetailPage().clickOnaddToBasket();
     }
 
     @Then("^Verify that the notification is shown Added to Basket$")
-    public void verifyThatTheNotificationIsShownAddedToBasket() {
+    public void verifyThatTheNotificationIsShownAddedToBasket() throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertEquals("Cannot verifying the message ",new BasketPage().verifyNotificationAddedToBasket());
     }
 
     @And("^Verify that the one item in the basket$")
-    public void verifyThatTheOneItemInTheBasketInputValueProceedToCheckout() {
+    public void verifyThatTheOneItemInTheBasketInputValueProceedToCheckout() throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertEquals("Cannot verifying the message",new BasketPage().verifyThereisOneItem());
     }
 
    @And("^I click On Go to Basket button$")
-    public void iClickOnGoToBasketButton() {
+    public void iClickOnGoToBasketButton() throws InterruptedException {
+        Thread.sleep(1000);
         new BasketPage().clickOnGoToBasket();
     }
 

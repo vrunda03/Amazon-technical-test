@@ -9,6 +9,8 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class BookSectionPage extends Utility {
     public BookSectionPage() {
         PageFactory.initElements(driver, this);
@@ -21,14 +23,14 @@ public class BookSectionPage extends Utility {
     @FindBy(xpath = "//span[contains(text(),'Harry Potter and the Philosopher’s Stone – 25th An')]")
     WebElement verifyBook;
     @CacheLookup
-    @FindBy(xpath = "//body/div[@id='a-page']/div[@id='search']/div[1]/div[1]/div[1]/span[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/div[1]/span[1]/span[1]")
+    @FindBy(css = "div[class='rush-component s-featured-result-item '] span[class='a-badge-text']")
     WebElement bestSellerBadge;
     @CacheLookup
     @FindBy(xpath = "//body/div[@id='a-page']/div[@id='search']/div[1]/div[1]/div[1]/span[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/a[1]")
     WebElement paperback;
     @CacheLookup
-    @FindBy(xpath = "//body/div[@id='a-page']/div[@id='search']/div[1]/div[1]/div[1]/span[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/a[1]/span[2]")
-    WebElement wholeprice;
+    @FindBy(xpath = "//span[@class='a-price-whole']")
+    List<WebElement> wholeprice;
     @CacheLookup
     @FindBy(xpath = "//span[contains(text(),'Harry Potter and the Philosopher’s Stone – 25th An')]")
     WebElement bookdetail;
@@ -47,8 +49,8 @@ public class BookSectionPage extends Utility {
         return getTextFromElement(paperback);
     }
     public String verifyPrice() {
-        log.info("Verifying this book dispalyed Price   " + wholeprice.toString());
-        return getTextFromElement(wholeprice);
+        log.info("Verifying this book dispalyed Price   " + wholeprice.get(0).toString());
+        return getTextFromElement(wholeprice.get(0));
     }
     public void clickOnBookdetail() {
         clickOnElement(bookdetail);

@@ -27,6 +27,6 @@ public class Hooks extends Utility {
                 e.printStackTrace();
             }
         }
-//        closeBrowser();
+        closeBrowser();
     }
 }

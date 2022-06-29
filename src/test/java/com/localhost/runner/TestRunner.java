@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "com.cucumber.listener.ExtentCucumberFormatter:target/Extent_Reports/report.html"
 
         },
-        tags = "@sanity"
+        tags = "@smoke"
 
 )
 public class TestRunner {

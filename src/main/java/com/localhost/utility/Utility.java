@@ -19,14 +19,7 @@ import java.util.List;
 public class Utility extends ManageDriver {
     /*Utility Class extends to ManageDriver for the driver to finding locators
      *All common methods are fixed in the utility Class.
-     *
-     * This method will generate random number
-     */
-    public int generateRandomNumber() {
-        return (int) (Math.random() * 5000 + 1);
 
-    }
-    /**
      * This method will generate random string
      */
     public static String getRandomString(int length) {
@@ -38,6 +31,7 @@ public class Utility extends ManageDriver {
         }
         return sb.toString();
     }
+
     /**
      * This method will click on element
      */
@@ -45,6 +39,7 @@ public class Utility extends ManageDriver {
         WebElement element = driver.findElement(by);
         element.click();
     }
+
     public void clickOnElement(WebElement element) {
         element.click();
     }
@@ -78,7 +73,25 @@ public class Utility extends ManageDriver {
         return driver.findElements(by);
     }
 
+    /**
+     * This method will clear previous stored data
+     */
+    public void clearTextFromField(By by) {
+        driver.findElement(by).sendKeys(Keys.CONTROL + "a");
+        driver.findElement(by).sendKeys(Keys.DELETE);
+    }
+
+    public void clearTextToElement(WebElement element) {
+        element.clear();
+    }
+
+    public void sendTabAndEnterKey(By by) {
+        driver.findElement(by).sendKeys(Keys.TAB);
+        //driver.findElement(by).sendKeys(Keys.ENTER);
+    }
+
 //*************************** Alert Methods ***************************************//
+
     /**
      * This method will switch to alert
      */
@@ -113,7 +126,59 @@ public class Utility extends ManageDriver {
     public void sendTextToAlert(String text) {
         driver.switchTo().alert().sendKeys(text);
     }
+
+
+//*************************** Select Class Methods ***************************************//
+
+    /**
+     * This method will select the option by visible text
+     */
+    public void selectByVisibleTextFromDropDown(By by, String text) {
+        WebElement dropDown = driver.findElement(by);
+        Select select = new Select(dropDown);
+        select.selectByVisibleText(text);
+    }
+
+    public void selectByVisibleTextFromDropDown(WebElement element, String text) {
+        new Select(element).selectByVisibleText(text);
+    }
+
+    /**
+     * This method will select the option by value
+     */
+    public void selectByValueFromDropDown(By by, String value) {
+        new Select(driver.findElement(by)).selectByValue(value);
+    }
+
+    public void selectByValueFromDropDown(WebElement element, String value) {
+        new Select(element).selectByValue(value);
+    }
+
+    /**
+     * This method will select the option by index
+     */
+    public void selectByIndexFromDropDown(By by, int index) {
+        new Select(driver.findElement(by)).selectByIndex(index);
+    }
+
+    public void selectByIndexFromDropDown(WebElement element, int index) {
+        new Select(element).selectByIndex(index);
+    }
+
+    /**
+     * This method will select the option by contains text
+     */
+    public void selectByContainsTextFromDropDown(By by, String text) {
+        List<WebElement> allOptions = new Select(driver.findElement(by)).getOptions();
+        for (WebElement options : allOptions) {
+            if (options.getText().contains(text)) {
+                options.click();
+            }
+        }
+    }
+
 //*************************** Window Handle Methods ***************************************//
+
     /**
      * This method will close all windows
      */
@@ -124,13 +189,128 @@ public class Utility extends ManageDriver {
             }
         }
     }
+
+    /**
+     * This method will switch to parent window
+     */
+    public void switchToParentWindow(String parentWindowId) {
+        driver.switchTo().window(parentWindowId);
+    }
+
+    /**
+     * This method will find that we switch to right window
+     */
+    public boolean switchToRightWindow(String windowTitle, List<String> hList) {
+        for (String str : hList) {
+            String title = driver.switchTo().window(str).getTitle();
+            if (title.contains(windowTitle)) {
+                System.out.println("Found the right window....");
+                return true;
+            }
+        }
+        return false;
+    }
+//*************************** Action Methods ***************************************//
+
+    /**
+     * This method will use to hover mouse on element
+     */
+    public void mouseHoverToElement(By by) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(by)).build().perform();
+    }
+
+    public void mouseHoverToElement(WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+    }
+
+    /**
+     * This method will use to hover mouse on element and click
+     */
+    public void mouseHoverToElementAndClick(By by) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(by)).click().perform();
+    }
+
+    public void mouseHoverToElementAndClick(WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).click().perform();
+    }
+
+    //************************** Waits Methods *********************************************//
+
+    /**
+     * This method will use to wait until  VisibilityOfElementLocated
+     */
+    public WebElement waitUntilVisibilityOfElementLocated(By by, int time) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
+
+    public WebElement waitForElementWithFluentWait(By by, int time, int pollingTime) {
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(time))
+                .pollingEvery(Duration.ofSeconds(pollingTime))
+                .ignoring(NoSuchElementException.class);
+
+        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+            public WebElement apply(WebDriver driver) {
+                return driver.findElement(by);
+            }
+        });
+        return element;
+    }
+
+//***************************** Is Display Methods **********************************************//
+
+    /**
+     * This method will verify that element is displayed
+     */
+    public boolean verifyThatElementIsDisplayed(By by) {
+        WebElement element = driver.findElement(by);
+        if (element.isDisplayed()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean verifyThatElementIsDisplayed(WebElement element) {
+        if (element.isDisplayed()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * This method will verify that element is displayed
+     */
+    public boolean verifyThatTextIsDisplayed(By by, String text) {
+        WebElement element = driver.findElement(by);
+        if (text.equals(element.getText())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean verifyThatTextIsDisplayed(WebElement element, String text) {
+        if (text.equals(element.getText())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     //************************** ScreenShot Methods *********************************************//
 
     /**
      * This method will take screenshot
      */
     public static void takeScreenShot() {
-        String filePath = System.getProperty("user.dir") + "/src/main/java/com/localhost/screenshots/";
+        String filePath = System.getProperty("user.dir") + "/src/main/java/com/automation/screenshots/";
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File scr1 = screenshot.getScreenshotAs(OutputType.FILE);
         try {
@@ -144,13 +324,14 @@ public class Utility extends ManageDriver {
         Date d = new Date();
         return d.toString().replace(":", "_").replace(" ", "_");
     }
+
     public static String getScreenshot(WebDriver driver, String screenshotName) {
         String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
 
         // After execution, you could see a folder "FailedTestsScreenshots" under screenshot folder
-        String destination = System.getProperty("user.dir") + "src/main/java/com/localhost" + screenshotName + dateName + ".png";
+        String destination = System.getProperty("user.dir") + "/src/main/java/com/automation/screenshots/" + screenshotName + dateName + ".png";
         File finalDestination = new File(destination);
         try {
             FileUtils.copyFile(source, finalDestination);
@@ -159,6 +340,7 @@ public class Utility extends ManageDriver {
         }
         return destination;
     }
+
     /*
      *Screenshot methods
      */
