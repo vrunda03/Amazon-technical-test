@@ -775,3 +775,14 @@
 2022-06-30 00:06:916 INFO  BookSectionPage :52 - Verifying this book dispalyed Price   [[ChromeDriver: chrome on WINDOWS (e7a37ec28fd1f0969e8e7710b3788551)] -> xpath: //span[@class='a-price-whole']]
 2022-06-30 00:06:982 INFO  BookSectionPage :57 - Verifying this book dispalyed Price   [[ChromeDriver: chrome on WINDOWS (e7a37ec28fd1f0969e8e7710b3788551)] -> xpath: //span[contains(text(),'Harry Potter and the Philosopher’s Stone – 25th An')]]
 2022-06-30 00:06:22 INFO  BookDetailPage :44 - Verifying this book displayed title   Proxy element for: DefaultElementLocator 'By.xpath: //span[@id='productTitle']'
+2022-06-30 11:06:399 INFO  ManageDriver :35 - Launching Chrome Browser
+2022-06-30 11:06:383 INFO  ManageDriver :35 - Launching Chrome Browser
+2022-06-30 11:06:888 INFO  HomePage :34 - Clicking on close button[[ChromeDriver: chrome on WINDOWS (dedc39dfb2c1e9c0c9df24090143bd4a)] -> xpath: //input[@id='sp-cc-accept']]
+2022-06-30 11:06:980 INFO  HomePage :44 - Enter bookHarry Potter and the Philosopher’s Stone – 25th Anniversary Edition: J.K. Rowling -25th Ann. Ed. to email field [[ChromeDriver: chrome on WINDOWS (dedc39dfb2c1e9c0c9df24090143bd4a)] -> xpath: //input[@id='twotabsearchtextbox']]
+2022-06-30 11:06:611 INFO  HomePage :49 - Clicking on search button[[ChromeDriver: chrome on WINDOWS (dedc39dfb2c1e9c0c9df24090143bd4a)] -> xpath: //input[@id='nav-search-submit-button']]
+2022-06-30 11:06:657 INFO  BookSectionPage :40 - Verifying this book dispalyed first in the list [[ChromeDriver: chrome on WINDOWS (dedc39dfb2c1e9c0c9df24090143bd4a)] -> xpath: //span[contains(text(),'Harry Potter and the Philosopher’s Stone – 25th An')]]
+2022-06-30 11:06:714 INFO  BookSectionPage :44 - Verifying this book dispalyed Bestseller badge  [[ChromeDriver: chrome on WINDOWS (dedc39dfb2c1e9c0c9df24090143bd4a)] -> css selector: div[class='rush-component s-featured-result-item '] span[class='a-badge-text']]
+2022-06-30 11:06:765 INFO  BookSectionPage :48 - Verifying this book dispalyed Bestseller badge  [[ChromeDriver: chrome on WINDOWS (dedc39dfb2c1e9c0c9df24090143bd4a)] -> xpath: //body/div[@id='a-page']/div[@id='search']/div[1]/div[1]/div[1]/span[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/a[1]]
+2022-06-30 11:06:833 INFO  BookSectionPage :52 - Verifying this book dispalyed Price   [[ChromeDriver: chrome on WINDOWS (dedc39dfb2c1e9c0c9df24090143bd4a)] -> xpath: //span[@class='a-price-whole']]
+2022-06-30 11:06:953 INFO  BookSectionPage :57 - Verifying this book dispalyed Price   [[ChromeDriver: chrome on WINDOWS (dedc39dfb2c1e9c0c9df24090143bd4a)] -> xpath: //span[contains(text(),'Harry Potter and the Philosopher’s Stone – 25th An')]]
+2022-06-30 11:06:12 INFO  BookDetailPage :44 - Verifying this book displayed title   Proxy element for: DefaultElementLocator 'By.xpath: //span[@id='productTitle']'

@@ -53,7 +53,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jun 30, 2022 12:27:51 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Jun 30, 2022 11:20:25 AM</span>
 				</a>
 			</li>
 			<li>
@@ -171,10 +171,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>8</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='64.286%'><span class='strong'>9</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='8.333%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='25%'>3</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='7.143%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='28.571%'>4</span> others
 				</div>
 			</div>
 		</div>
@@ -191,7 +191,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Functionality Test of given website</span>
-						<span class='test-time'>Jun 30, 2022 12:27:51 AM</span>
+						<span class='test-time'>Jun 30, 2022 11:20:25 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -199,7 +199,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@smoke</span>
 	</div>
-	<span class='duration right label'>0h 1m 6s+753ms</span>
+	<span class='duration right label'>0h 1m 8s+624ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Search forHarry Potter and the Philosopher’s Stone – 25th Anniversary Edition in section books</span>
@@ -249,7 +249,7 @@
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And I Verify that Selected type is "Paperback" paperback</span>
+			<span class="bdd-step-name">And I Verify that book has "Best Seller" badge</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -257,7 +257,7 @@
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And I Verify that the price is £"8"</span>
+			<span class="bdd-step-name">And I Verify that Selected type is "Paperback" paperback</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -265,24 +265,32 @@
 			
 			<b>And</b>
 			
+			<span class="bdd-step-name">And I Verify that the price is £"8"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='11' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
 			<span class="bdd-step-name">And I navigate to the book details</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='11' class='node and fail' status='fail'>
+		<li test-id='12' class='node and fail' status='fail'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I Verify that first item title of detail page is "Harry Potter and the Philosopher’s Stone – 25th Anniversary Edition: J.K. Rowling -25th Ann. Ed.- "</span>
 				<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@id='productTitle']"}
-  (Session info: chrome=102.0.5005.115)
+  (Session info: chrome=103.0.5060.66)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0', revision: '3a21814679'
 System info: host: 'KEYOU', ip: '192.168.1.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e7a37ec28fd1f0969e8e7710b3788551, findElement {using=xpath, value=//span[@id='productTitle']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\mihir\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65427}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65427/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e7a37ec28fd1f0969e8e7710b3788551
+Command: [dedc39dfb2c1e9c0c9df24090143bd4a, findElement {using=xpath, value=//span[@id='productTitle']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\mihir\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56410}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56410/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dedc39dfb2c1e9c0c9df24090143bd4a
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -303,12 +311,12 @@ Session ID: e7a37ec28fd1f0969e8e7710b3788551
 	at com.sun.proxy.$Proxy23.getText(Unknown Source)
 	at com.localhost.utility.Utility.getTextFromElement(Utility.java:55)
 	at com.localhost.pages.BookDetailPage.verifyTitle(BookDetailPage.java:45)
-	at com.localhost.steps.BookDetailSteps.iVerifyThatFirstItemTitleOfDetailPageIs(BookDetailSteps.java:19)
+	at com.localhost.steps.BookDetailSteps.iVerifyThatFirstItemTitleOfDetailPageIs(BookDetailSteps.java:20)
 	at ✽.And I Verify that first item title of detail page is "Harry Potter and the Philosopher’s Stone – 25th Anniversary Edition: J.K. Rowling -25th Ann. Ed.- "(homepage.feature:19)
 </pre></div>
 			
 		</li>
-		<li test-id='12' class='node and skip' status='skip'>
+		<li test-id='13' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
@@ -316,7 +324,7 @@ Session ID: e7a37ec28fd1f0969e8e7710b3788551
 				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='13' class='node and skip' status='skip'>
+		<li test-id='14' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
@@ -324,13 +332,21 @@ Session ID: e7a37ec28fd1f0969e8e7710b3788551
 				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='14' class='node and skip' status='skip'>
+		<li test-id='15' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I Verify that type is paperback "Paperback"of detail page</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='16' class='node then skip' status='skip'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should navigate to Add to Basket page</span>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\mihir\IdeaProjects\technical-test-project/src/main/java/com/automation/screenshots/Search_forHarry_Potter_and_the_Philosopher’s_Stone_–_25th_Anniversary_Edition_in_section_books20220630122858.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="C:\Users\mihir\IdeaProjects\technical-test-project/src/main/java/com/localhost/screenshots/Search_forHarry_Potter_and_the_Philosopher’s_Stone_–_25th_Anniversary_Edition_in_section_books20220630112134.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 				<div class='pre'>skipped</div>
 			
@@ -414,7 +430,7 @@ Session ID: e7a37ec28fd1f0969e8e7710b3788551
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jun 30, 2022 12:27:51 AM</td>
+										<td>Jun 30, 2022 11:20:25 AM</td>
 										<td class='linked' test-id='2'>Functionality Test of given website.Search forHarry Potter and the Philosopher’s Stone – 25th Anniversary Edition in section books</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -477,17 +493,17 @@ Session ID: e7a37ec28fd1f0969e8e7710b3788551
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Jun 30, 2022 12:28:07 AM</td>
-                                                        <td class='linked' test-id='11'>Functionality Test of given website.Search forHarry Potter and the Philosopher’s Stone – 25th Anniversary Edition in section books.And I Verify that first item title of detail page is "Harry Potter and the Philosopher’s Stone – 25th Anniversary Edition: J.K. Rowling -25th Ann. Ed.- "</td>
+                                                        <td>Jun 30, 2022 11:20:43 AM</td>
+                                                        <td class='linked' test-id='12'>Functionality Test of given website.Search forHarry Potter and the Philosopher’s Stone – 25th Anniversary Edition in section books.And I Verify that first item title of detail page is "Harry Potter and the Philosopher’s Stone – 25th Anniversary Edition: J.K. Rowling -25th Ann. Ed.- "</td>
                                                         <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@id='productTitle']"}
-  (Session info: chrome=102.0.5005.115)
+  (Session info: chrome=103.0.5060.66)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0', revision: '3a21814679'
 System info: host: 'KEYOU', ip: '192.168.1.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e7a37ec28fd1f0969e8e7710b3788551, findElement {using=xpath, value=//span[@id='productTitle']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\mihir\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65427}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65427/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e7a37ec28fd1f0969e8e7710b3788551
+Command: [dedc39dfb2c1e9c0c9df24090143bd4a, findElement {using=xpath, value=//span[@id='productTitle']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\mihir\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56410}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56410/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dedc39dfb2c1e9c0c9df24090143bd4a
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -508,7 +524,7 @@ Session ID: e7a37ec28fd1f0969e8e7710b3788551
 	at com.sun.proxy.$Proxy23.getText(Unknown Source)
 	at com.localhost.utility.Utility.getTextFromElement(Utility.java:55)
 	at com.localhost.pages.BookDetailPage.verifyTitle(BookDetailPage.java:45)
-	at com.localhost.steps.BookDetailSteps.iVerifyThatFirstItemTitleOfDetailPageIs(BookDetailSteps.java:19)
+	at com.localhost.steps.BookDetailSteps.iVerifyThatFirstItemTitleOfDetailPageIs(BookDetailSteps.java:20)
 	at ✽.And I Verify that first item title of detail page is "Harry Potter and the Philosopher’s Stone – 25th Anniversary Edition: J.K. Rowling -25th Ann. Ed.- "(homepage.feature:19)
 </pre></pre></td>
                                                     </tr>
@@ -548,25 +564,25 @@ Session ID: e7a37ec28fd1f0969e8e7710b3788551
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>12</div>
+					<div class='panel-lead'>14</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jun 30, 2022 12:27:51 AM</div>
+					<div class='panel-lead'>Jun 30, 2022 11:20:25 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jun 30, 2022 12:28:59 AM</div>
+			 		<div class='panel-lead'>Jun 30, 2022 11:21:35 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>68,058ms</div>
+					<div class='panel-lead'>69,811ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -656,14 +672,14 @@ Session ID: e7a37ec28fd1f0969e8e7710b3788551
 				infoChild: 0,
 				exceptionsChild: 1,
 				
-				passGrandChild: 8,
+				passGrandChild: 9,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 3,
+				skipGrandChild: 4,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 4,
+				exceptionsGrandChild: 5,
 			};
 		</script>
 		
