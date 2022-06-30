@@ -1,3 +1,4 @@
+
 Feature: Functionality Test of given website
 
   Scenario: I should open homepage successfully
