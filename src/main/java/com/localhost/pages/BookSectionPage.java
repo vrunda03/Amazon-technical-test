@@ -20,19 +20,19 @@ public class BookSectionPage extends Utility {
 
     //Locating path of required WebElement of Shopping cart page
     @CacheLookup
-    @FindBy(xpath = "//span[contains(text(),'Harry Potter and the Philosopher’s Stone – 25th An')]")
+    @FindBy(xpath = "//div[@class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1']//span[@class='a-size-medium a-color-base a-text-normal'][contains(text(),'Harry Potter and the Cursed Child - Parts One and ')]")
     WebElement verifyBook;
     @CacheLookup
-    @FindBy(css = "div[class='rush-component s-featured-result-item '] span[class='a-badge-text']")
+    @FindBy(xpath = "//span[@id='1408855658-best-seller-label']//span[@class='a-badge-text'][normalize-space()='Best Seller']")
     WebElement bestSellerBadge;
     @CacheLookup
-    @FindBy(xpath = "//body/div[@id='a-page']/div[@id='search']/div[1]/div[1]/div[1]/span[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/a[1]")
+    @FindBy(css = "div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1'] a[class='a-size-base a-link-normal s-underline-text s-underline-link-text s-link-style a-text-bold']")
     WebElement paperback;
     @CacheLookup
     @FindBy(xpath = "//span[@class='a-price-whole']")
     List<WebElement> wholeprice;
     @CacheLookup
-    @FindBy(xpath = "//span[contains(text(),'Harry Potter and the Philosopher’s Stone – 25th An')]")
+    @FindBy(xpath = "//div[@class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1']//span[@class='a-size-medium a-color-base a-text-normal'][contains(text(),'Harry Potter and the Cursed Child - Parts One and ')]")
     WebElement bookdetail;
 
     // Re-usable methods to implement the logic

@@ -48,6 +48,7 @@ public class Utility extends ManageDriver {
      * This method will get text from element
      */
     public String getTextFromElement(By by) {
+
         return driver.findElement(by).getText();
     }
 

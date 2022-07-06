@@ -1,0 +1,5 @@
+com\localhost\runner\TestRunner.class
+com\localhost\steps\BookDetailSteps.class
+com\localhost\steps\BookSteps.class
+com\localhost\steps\MyStepdefs.class
+com\localhost\Hooks.class

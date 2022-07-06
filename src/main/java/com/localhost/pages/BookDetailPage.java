@@ -19,19 +19,19 @@ public class BookDetailPage extends Utility {
 
     //Locating path of required WebElement of Shopping cart page
     @CacheLookup
-    @FindBy(xpath = "//span[@id='productTitle']")
+    @FindBy(xpath = "//*[@id='productTitle']")
     WebElement bookTitle;
     @CacheLookup
     @FindBy(xpath = "//i[contains(text(),'#1 Best Seller')]")
     WebElement bestSeller;
     @CacheLookup
-    @FindBy(xpath = "//span[@id='productTitle']")
+    @FindBy(xpath = "//a[@id='a-autoid-6-announce']//span[contains(text(),'Paperback')]")
     WebElement paperback;
     @CacheLookup
-    @FindBy(xpath = "//body/div[@id='a-page']/div[@id='dp']/div[@id='dp-container']/div[1]/div[7]/div[14]/div[2]/div[2]/ul[1]/li[1]/span[1]/span[1]/span[1]/a[1]/span[2]/span[1]")
+    @FindBy(xpath = "//span[@class='a-size-base a-color-price a-color-price']")
     WebElement price;
     @CacheLookup
-    @FindBy(xpath="//input[@id='add-to-cart-button']")
+    @FindBy(css="#add-to-cart-button")
     WebElement addToBasket;
 
     // Re-usable methods to implement the logic

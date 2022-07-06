@@ -17,8 +17,10 @@ public class BookDetailSteps {
     @And("^I Verify that first item title of detail page is \"([^\"]*)\"$")
     public void iVerifyThatFirstItemTitleOfDetailPageIs(String text) throws InterruptedException {
         Thread.sleep(10000);
-        Assert.assertTrue(new BookDetailPage().verifyTitle()
-                .contains("Harry Potter and the Philosopher’s Stone"));
+        Assert.assertEquals(text,new BookDetailPage().verifyTitle().substring(0,54));
+
+//        Assert.assertTrue(new BookDetailPage().verifyTitle()
+//                .contains("Harry Potter and the Philosopher’s Stone"));
 
     }
 
@@ -35,7 +37,7 @@ public class BookDetailSteps {
     }
 
     @And("^I Verify that price is £\"([^\"]*)\"in detail page$")
-    public void iVerifyThatPriceIs£InDetailPage(String text) {
+    public void iVerifyThatPriceIsInDetailPage(String text) {
         Assert.assertEquals("Price is not correct ", text, new BookDetailPage().verifyPricedetail());
     }
 

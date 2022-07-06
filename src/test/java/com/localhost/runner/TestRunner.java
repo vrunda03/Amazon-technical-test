@@ -15,12 +15,13 @@ import org.junit.runner.RunWith;
                 "com.cucumber.listener.ExtentCucumberFormatter:target/Extent_Reports/report.html"
 
         },
-        tags = "@smoke"
+//        tags = "@sanity"
+        tags=("@smoke")
+
 
 )
 public class TestRunner {
-
-    @AfterClass
+   @AfterClass
     public static void setUp() {
         String projectPath = System.getProperty("user.dir");
         String reportConfigPath = projectPath + "/src/test/java/resources/extentreport/extent-config.xml";
@@ -28,7 +29,7 @@ public class TestRunner {
         Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
         Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
         Reporter.setSystemInfo("Machine", "Windows 11" + "64 Bit");
-        Reporter.setSystemInfo("Selenium", "3.141.59");
+        Reporter.setSystemInfo("Selenium", "4.0.RC");
         Reporter.setSystemInfo("Maven", "3.5.9");
         Reporter.setSystemInfo("Java Version", "1.8.0_151");
     }

@@ -25,7 +25,7 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-
+<!--for to indicate maven which java integrated Cucumber files are to be downloaded from the central repository to the local repository-->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
@@ -41,6 +41,7 @@
       <artifactId>testng</artifactId>
       <version>6.14.3</version>
     </dependency>
+<!--    file operation like file read,transfer,copy files-->
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
